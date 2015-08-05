@@ -102,11 +102,16 @@ brew_install_or_upgrade 'brew-cask'
 brew cask install dropbox
 brew cask install google-chrome
 brew cask install rdio
+brew cask install slack
+brew cask install viscosity
+brew cask install virtualbox
+brew cask install vagrant
+brew cask install atom
+brew cask install iterm2
+brew cask install spectacle
 
-gem_install_or_update 'parity'
-
-brew_install_or_upgrade 'tree'
-brew_install_or_upgrade 'watch'
+brew_install_or_upgrade 'python'
+brew_install_or_upgrade 'ansible'
 ```
 
 Write your customizations such that they can be run safely more than once.
