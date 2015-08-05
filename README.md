@@ -46,21 +46,21 @@ What it sets up
 ---------------
 
 * [Bundler] for managing Ruby libraries
-* [Exuberant Ctags] for indexing files for vim tab completion
-* [Foreman] for managing web processes
-* [hub] for interacting with the GitHub API
-* [Heroku Toolbelt] for interacting with the Heroku API
+* ~~[Exuberant Ctags] for indexing files for vim tab completion~~
+* ~~[Foreman] for managing web processes~~
+* ~~[hub] for interacting with the GitHub API~~
+* ~~[Heroku Toolbelt] for interacting with the Heroku API~~
 * [Homebrew] for managing operating system libraries
-* [ImageMagick] for cropping and resizing images
+* ~~[ImageMagick] for cropping and resizing images~~
 * [Node.js] and [NPM], for running apps and installing JavaScript packages
-* [Postgres] for storing relational data
-* [Qt] for headless JavaScript testing via Capybara Webkit
-* [Rbenv] for managing versions of Ruby
-* [RCM] for managing company and personal dotfiles
-* [Redis] for storing key-value data
-* [Ruby Build] for installing Rubies
-* [Ruby] stable for writing general-purpose code
-* [The Silver Searcher] for finding things in files
+* ~~[Postgres] for storing relational data~~
+* ~~[Qt] for headless JavaScript testing via Capybara Webkit~~
+* ~~[Rbenv] for managing versions of Ruby~~
+* ~~[RCM] for managing company and personal dotfiles~~
+* ~~[Redis] for storing key-value data~~
+* ~~[Ruby Build] for installing Rubies~~
+* ~~[Ruby] stable for writing general-purpose code~~
+* ~~[The Silver Searcher] for finding things in files~~
 * [Tmux] for saving project state and switching between projects
 * [Zsh] as your shell
 
@@ -90,7 +90,7 @@ Customize in `~/.laptop.local`
 ------------------------------
 
 Your `~/.laptop.local` is run at the end of the Laptop script.
-Put your customizations there.
+Put your customizations there. Example is in this repo
 For example:
 
 ```sh
