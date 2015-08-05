@@ -55,11 +55,11 @@ What it sets up
 * [Node.js] and [NPM], for running apps and installing JavaScript packages
 * ~~[Postgres] for storing relational data~~
 * ~~[Qt] for headless JavaScript testing via Capybara Webkit~~
-* ~~[Rbenv] for managing versions of Ruby~~
+* [Rbenv] for managing versions of Ruby
 * ~~[RCM] for managing company and personal dotfiles~~
 * ~~[Redis] for storing key-value data~~
-* ~~[Ruby Build] for installing Rubies~~
-* ~~[Ruby] stable for writing general-purpose code~~
+* [Ruby Build] for installing Rubies
+* [Ruby] stable for writing general-purpose code
 * ~~[The Silver Searcher] for finding things in files~~
 * [Tmux] for saving project state and switching between projects
 * [Zsh] as your shell
