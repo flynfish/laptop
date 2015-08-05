@@ -90,7 +90,7 @@ Customize in `~/.laptop.local`
 ------------------------------
 
 Your `~/.laptop.local` is run at the end of the Laptop script.
-Put your customizations there. Example is in this repo
+Put your customizations there.
 For example:
 
 ```sh
