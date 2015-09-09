@@ -143,10 +143,13 @@ brew_install_or_upgrade 'reattach-to-user-namespace'
 #brew_install_or_upgrade 'qt'
 #brew_install_or_upgrade 'hub'
 
-#brew_install_or_upgrade 'postgres'
-#brew_launchctl_restart 'postgresql'
-#brew_install_or_upgrade 'redis'
-#brew_launchctl_restart 'redis'
+brew_install_or_upgrade 'mysql'
+brew_launchctl_restart 'mysql'
+brew_install_or_upgrade 'postgres'
+brew_launchctl_restart 'postgresql'
+brew_install_or_upgrade 'redis'
+brew_launchctl_restart 'redis'
+
 #brew_install_or_upgrade 'the_silver_searcher'
 
 brew_install_or_upgrade 'node'
