@@ -133,24 +133,25 @@ brew update
 
 brew_install_or_upgrade 'zsh'
 brew_install_or_upgrade 'git'
-#brew_install_or_upgrade 'postgres'
-#brew_launchctl_restart 'postgresql'
-#brew_install_or_upgrade 'redis'
-#brew_launchctl_restart 'redis'
-#brew_install_or_upgrade 'the_silver_searcher'
 brew_install_or_upgrade 'vim'
 brew_install_or_upgrade 'macvim'
 brew_install_or_upgrade 'ctags'
 brew_install_or_upgrade 'tmux'
 brew_install_or_upgrade 'reattach-to-user-namespace'
+
 #brew_install_or_upgrade 'imagemagick'
 #brew_install_or_upgrade 'qt'
 #brew_install_or_upgrade 'hub'
+
+#brew_install_or_upgrade 'postgres'
+#brew_launchctl_restart 'postgresql'
+#brew_install_or_upgrade 'redis'
+#brew_launchctl_restart 'redis'
+#brew_install_or_upgrade 'the_silver_searcher'
+
 brew_install_or_upgrade 'node'
 brew_install_or_upgrade 'go'
 brew_install_or_upgrade 'ansible'
-brew_install_or_upgrade 'libiconv'
-
 brew_install_or_upgrade 'rbenv'
 brew_install_or_upgrade 'ruby-build'
 
@@ -190,3 +191,5 @@ fancy_echo "Configuring Bundler ..."
 if [ -f "$HOME/.laptop.local" ]; then
   . "$HOME/.laptop.local"
 fi
+
+# if Darwin/MacOSX, then run this, xcode-select --install
