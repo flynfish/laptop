@@ -157,6 +157,7 @@ brew_install_or_upgrade 'go'
 brew_install_or_upgrade 'ansible'
 brew_install_or_upgrade 'rbenv'
 brew_install_or_upgrade 'ruby-build'
+brew_install_or_upgrade 'rbenv-bundler'
 
 # shellcheck disable=SC2016
 append_to_zshrc 'eval "$(rbenv init - --no-rehash zsh)"' 1
