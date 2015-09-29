@@ -64,6 +64,7 @@ What it sets up
 * [Tmux] for saving project state and switching between projects
 * [Zsh] as your shell
 
+[Ansible]: http://docs.ansible.com/
 [Bundler]: http://bundler.io/
 [Exuberant Ctags]: http://ctags.sourceforge.net/
 [Foreman]: https://github.com/ddollar/foreman
@@ -74,6 +75,7 @@ What it sets up
 [Node.js]: http://nodejs.org/
 [NPM]: https://www.npmjs.org/
 [Postgres]: http://www.postgresql.org/
+[Python]: https://www.python.org/
 [Qt]: http://qt-project.org/
 [Rbenv]: https://github.com/sstephenson/rbenv
 [RCM]: https://github.com/thoughtbot/rcm
@@ -96,8 +98,7 @@ For example:
 ```sh
 #!/bin/sh
 
-brew_install_or_upgrade 'python'
-brew_install_or_upgrade 'ansible'
+brew_install_or_upgrade 'whatever_extra_formula_you_want'
 ```
 
 Write your customizations such that they can be run safely more than once.
