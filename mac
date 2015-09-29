@@ -53,6 +53,8 @@ case "$SHELL" in
     ;;
 esac
 
+
+
 brew_install_or_upgrade() {
   if brew_is_installed "$1"; then
     if brew_is_upgradable "$1"; then
@@ -128,9 +130,14 @@ else
   fancy_echo "Homebrew already installed. Skipping ..."
 fi
 
+
+
+
+
 fancy_echo "Updating Homebrew formulas ..."
 brew update
 
+# os
 brew_install_or_upgrade 'zsh'
 brew_install_or_upgrade 'git'
 brew_install_or_upgrade 'vim'
@@ -138,11 +145,12 @@ brew_install_or_upgrade 'macvim'
 brew_install_or_upgrade 'ctags'
 brew_install_or_upgrade 'tmux'
 brew_install_or_upgrade 'reattach-to-user-namespace'
+brew_install_or_upgrade 'imagemagick'
+brew_install_or_upgrade 'openssl'
+brew unlink openssl && brew link openssl --force
+brew_install_or_upgrade 'libyaml'
 
-#brew_install_or_upgrade 'imagemagick'
-#brew_install_or_upgrade 'qt'
-#brew_install_or_upgrade 'hub'
-
+# persistence
 brew_install_or_upgrade 'mysql'
 brew_launchctl_restart 'mysql'
 brew_install_or_upgrade 'postgres'
@@ -150,21 +158,37 @@ brew_launchctl_restart 'postgresql'
 brew_install_or_upgrade 'redis'
 brew_launchctl_restart 'redis'
 
-#brew_install_or_upgrade 'the_silver_searcher'
-
+# js
 brew_install_or_upgrade 'node'
+
+# go
 brew_install_or_upgrade 'go'
+
+# jvm-ish
+brew_install_or_upgrade 'scala'
+brew_install_or_upgrade 'typesafe-activator'
+
+# tools
 brew_install_or_upgrade 'ansible'
-brew_install_or_upgrade 'rbenv'
-brew_install_or_upgrade 'ruby-build'
 
 # shellcheck disable=SC2016
 append_to_zshrc 'eval "$(rbenv init - --no-rehash zsh)"' 1
 
-brew_install_or_upgrade 'openssl'
-brew unlink openssl && brew link openssl --force
-brew_install_or_upgrade 'libyaml'
 
+
+###############################################################################
+# python
+brew_install_or_upgrade 'pyenv'
+
+#pyenv install 2.7
+#pyenv install 3
+
+
+
+###############################################################################
+# ruby
+brew_install_or_upgrade 'rbenv'
+brew_install_or_upgrade 'ruby-build'
 ruby_version="$(curl -sSL http://ruby.thoughtbot.com/latest)"
 
 eval "$(rbenv init - zsh)"
@@ -184,15 +208,17 @@ fancy_echo "Configuring Bundler ..."
   number_of_cores=$(sysctl -n hw.ncpu)
   bundle config --global jobs $((number_of_cores - 1))
 
-#brew_install_or_upgrade 'heroku-toolbelt'
+###############################################################################
 
-#if ! command -v rcup >/dev/null; then
-#  brew_tap 'thoughtbot/formulae'
-#  brew_install_or_upgrade 'rcm'
-#fi
+
+
+# rcup for
+# https://github.com/thoughtbot/dotfiles
+if ! command -v rcup >/dev/null; then
+  brew_tap 'thoughtbot/formulae'
+  brew_install_or_upgrade 'rcm'
+fi
 
 if [ -f "$HOME/.laptop.local" ]; then
   . "$HOME/.laptop.local"
 fi
-
-# if Darwin/MacOSX, then run this, xcode-select --install
