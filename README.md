@@ -45,6 +45,7 @@ Or, attach the whole log file as an attachment.
 What it sets up
 ---------------
 
+* [Ansible] for devops automation
 * [Bundler] for managing Ruby libraries
 * ~~[Exuberant Ctags] for indexing files for vim tab completion~~
 * ~~[Foreman] for managing web processes~~
@@ -54,6 +55,7 @@ What it sets up
 * ~~[ImageMagick] for cropping and resizing images~~
 * [Node.js] and [NPM], for running apps and installing JavaScript packages
 * ~~[Postgres] for storing relational data~~
+* [Python] for python language
 * ~~[Qt] for headless JavaScript testing via Capybara Webkit~~
 * [Rbenv] for managing versions of Ruby
 * ~~[RCM] for managing company and personal dotfiles~~
